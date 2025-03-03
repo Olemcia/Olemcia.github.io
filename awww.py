@@ -52,10 +52,10 @@ def tworzenie_strony():
             f.write("# TIOBE Index\n")
             f.write(formatowanie(opis[4].text))
             f.write("\n\n[Click here to find out more.](podstrona.md)\n")
-
-        ranking = "# Top 20 programming languages \n ### Learn more about top 5 by clicking on them.\n"
-        top = 0
+            
         max_długość = 5 # tworzę podstrony dla top 5 języków, można to dowolnie zmieniać
+        ranking = f"# Top 20 programming languages \n ### Learn more about top {max_długość} by clicking on them.\n"
+        top = 0
         for lan in info:
             if top < max_długość:
                 ranking += f"### {lan[0]}. [{lan[1]}]({lan[1]}.md)\n\n"
